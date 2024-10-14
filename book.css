@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e; /* Dark background */
+    color: #f0f0f0; /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Payment page container to hold the two panels */
+.payment-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 80%;
+    max-width: 1200px;
+    padding: 40px;
+    margin-top: 400px;
+}
+
+/* Panel styles for both booking and payment details */
+.left-panel, .right-panel {
+    background-color: #292929; /* Dark grey background */
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Shared styles for headings inside the panels */
+.left-panel h3, .right-panel h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.left-panel p {
+    margin-bottom: 10px;
+    color: #cccccc;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+/* Styling for the payment form */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    display: block;
+    color: #f0f0f0;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Confirm and Pay button */
+.btn-confirm-pay {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm-pay:hover {
+    background-color: #0056b3;
+}
+
+/* Secure payment badge */
+.secure-badge {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.secure-badge img {
+    width: 120px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .payment-page {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+}
